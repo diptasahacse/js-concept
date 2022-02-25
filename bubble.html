@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+
+<body>
+    <main id="main-section">
+        <section id="section">
+            <ul id="ul">
+                <li class="item">List 1</li>
+                <li class="item">List 2</li>
+                <li class="item">List 3</li>
+                <li class="item">List 4</li>
+                <li class="item">List 5</li>
+                <li class="item" >List 6</li>
+            </ul>
+            <input type="text" id="input-text">
+            <button id="add-item">Add Item</button>
+        </section>
+    </main>
+    <script>
+        // 
+        document.getElementById('add-item').addEventListener('click',function(){
+            const li = document.createElement('li');
+            li.innerText = document.getElementById('input-text').value;
+            document.getElementById('ul').appendChild(li);
+            li.setAttribute('class',"item");
+        });
+        // 
+        // const lists = document.getElementsByClassName('item');
+        // for (const item of lists) {
+        //     item.addEventListener('click',function(event){
+        //         // document.getElementById('ul').removeChild(item);
+        //         event.target.parentNode.removeChild(event.target);
+
+        //     });
+
+        // }
+
+        // 
+        document.getElementById('ul').addEventListener('click',function(event){
+            // event.target.parentNode.removeChild(event.target);
+            console.log(event);
+
+        });
+
+
+    </script>
+</body>
+
+</html>

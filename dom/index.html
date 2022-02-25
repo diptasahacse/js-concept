@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="main" style="background-color: aqua;">
+        <article>
+            <h3>Title - 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora, laboriosam ratione voluptatem
+                cupiditate incidunt?</p>
+        </article>
+        <article class="second-blog">
+            <h3>Title - 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span>Nobis tempora</span> Nobis tempora,
+                laboriosam ratione voluptatem cupiditate incidunt?</p>
+        </article>
+        <article>
+            <h3>Title - 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. , laboriosam ratione voluptatem cupiditate
+                incidunt?</p>
+        </article>
+        <article>
+            <h3 id="last-title">Title - 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora, laboriosam ratione voluptatem
+                cupiditate incidunt?</p>
+        </article>
+
+    </main>
+
+
+
+
+    <script>
+
+        const newArticle = document.createElement('article');
+        // const h3 = document.createElement('h3');
+        // h3.innerText = "Title - 5";
+        // const p = document.createElement('p');
+        // p.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora, laboriosam ratione voluptatem
+        //         cupiditate incidunt?`;
+
+        // newArticle.appendChild(h3);
+        // newArticle.appendChild(p);
+
+        newArticle.innerHTML = `
+        <h3>Title - 5</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora, laboriosam ratione voluptatem</p>
+        `;
+        document.getElementById('main').appendChild(newArticle);
+
+        
+
+
+        // back color
+        const allArticle = document.getElementsByTagName('article');
+        let i = 0;
+        for (const article of allArticle) {
+            if (i % 2 == 0) {
+                article.style.backgroundColor = "green";
+                article.style.border = "2px solid gray";
+                article.style.borderRadius = "10px";
+                article.style.padding = "10px";
+                article.style.margin = "10px";
+                
+                
+                
+            }
+            else {
+                article.style.backgroundColor = "red";
+                article.style.border = "2px solid gray";
+                article.style.borderRadius = "10px";
+                article.style.padding = "10px";
+                article.style.margin = "10px";
+
+            }
+            i++;
+
+        }
+        document.getElementById('main').setAttribute('title','This is a Title')
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

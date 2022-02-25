@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #4D8AC8;
+}
+
+.clear-fix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.main-area {
+    text-align: center;
+}
+
+.calculator-area {
+    margin: 100px auto;
+    width: 500px;
+    background: #EBF5FF;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.display-area {
+    text-align: right;
+    background: #CCE5FF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button-area {
+    margin-top: 10px;
+}
+
+#calculation-text {
+    font-size: 30px;
+}
+
+#answer-value {
+    font-size: 50px;
+}
+
+
+/* button container */
+
+.button-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.button-item {
+    background: royalblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-item:hover {
+    cursor: pointer;
+}
+
+.button-item:last-child {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}

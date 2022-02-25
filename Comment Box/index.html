@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box by JS</title>
+    <style>
+        #comments p::before{
+            content: 'Comment :';
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container my-5">
+            <div class="comments-area">
+                <h3>All Comments..</h3>
+                <div id="comments"  class=" border  mb-5 p-5">
+
+                </div>
+
+            </div>
+            <div class="comment-input">
+                <textarea id="input-comment" cols="80" rows="10"></textarea>
+                <br>
+                <button id="comment-post-button">Comment</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('comment-post-button').addEventListener('click',function(){
+            const commentText = document.getElementById("input-comment").value;
+            const p = document.createElement('p');
+            p.innerText = commentText;
+            document.getElementById('comments').appendChild(p);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <section>
+        <div id="info-section">
+            <h3 id="secret-info">Secret Information</h3>
+        </div>
+        <input type="text" placeholder="Write 'Delete' to delete" id="input-text">
+        <br>
+        
+        <button id="delete-btn" disabled>Delete</button>
+        
+
+
+        <script>
+            // Focus
+            document.getElementById('input-text').addEventListener('focus',function(){
+                document.body.style.backgroundColor = 'red';
+                document.body.style.transition = '1s';
+            });
+            // Blur
+            document.getElementById('input-text').addEventListener('blur',function(){
+                document.body.style.backgroundColor = 'white';
+                document.body.style.transition = '1s';
+
+            });
+            // key down
+            // document.getElementById('input-text').addEventListener('keydown',function(){
+            //     // console.log(document.getElementById('input-text').value);
+
+            // });
+            // key press
+            // document.getElementById('input-text').addEventListener('keypress',function(){
+            //     // console.log(document.getElementById('input-text').value);
+
+            // });
+            // mouse move
+            // document.getElementById('input-text').addEventListener('mousemove',function(event){
+            //     console.log('Move')
+
+            // });
+            // // mouse over
+            // document.getElementById('input-text').addEventListener('mousemove',function(){
+            //     console.log('Over')
+
+            // });
+            // mouse leave
+            // document.getElementById('input-text').addEventListener('mouseleave',function(){
+            //     console.log('Leave')
+
+            // });
+            // mouse enter
+            // document.getElementById('input-text').addEventListener('mouseenter',function(){
+            //     console.log('Enter')
+
+            // });
+            // key up
+            document.getElementById('input-text').addEventListener('keyup',function(event){
+                // if(document.getElementById('input-text').value == 'delete'){
+                //     document.getElementById('delete-btn').removeAttribute('disabled');
+
+                // }
+                // else{
+                //     document.getElementById('delete-btn').setAttribute('disabled',true);
+
+                // }
+                if(event.target.value == 'delete'){
+                    document.getElementById('delete-btn').removeAttribute('disabled');
+
+                }
+                else{
+                    document.getElementById('delete-btn').setAttribute('disabled',true);
+
+                }
+                
+            });
+            // change
+            document.getElementById('input-text').addEventListener('change',function(){
+                console.log(document.getElementById('input-text').value);
+
+            });
+
+            // delete
+            document.getElementById('delete-btn').addEventListener('click',function(){
+                const info = document.getElementById('secret-info');
+                document.getElementById('info-section').removeChild(info);
+                document.getElementById('input-text').value = '';
+                
+                // document.getElementById('secret-info').parentNode.removeChild(info);
+                
+                
+
+                
+
+            });
+            
+            
+
+        </script>
+
+    </section>
+</body>
+</html>

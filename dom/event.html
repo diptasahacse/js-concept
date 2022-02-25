@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h3 style="background-color: indianred;"></h3>
+    <!-- Red Button -->
+    <button onclick="document.body.style.backgroundColor = 'red'">Click to Red</button>
+    <!-- Pink Button -->
+    <button onclick="makePink()">Click to Pink</button>
+    <!-- Gray Button -->
+    <button id="gray-button">Click to Gray</button>
+    <!-- Gold Button -->
+    <button id="gold-button">Click to Gold</button>
+    <!-- Indian Red Button -->
+    <button id="indianred-button">Click to Indian Red</button>
+    <script>
+        // Pink Button
+        function makePink(){
+            document.body.style.backgroundColor = 'pink';
+
+        }
+        // Gray Button
+        function makeGray(){
+            document.body.style.backgroundColor = 'gray';
+
+        }
+        document.getElementById('gray-button').onclick = makeGray;
+        // Gold Button
+        document.getElementById('gold-button').onclick = function(){
+            document.body.style.backgroundColor = 'gold';
+
+        };
+        // Indian Red
+        document.getElementById('indianred-button').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'indianred';
+        });
+
+
+
+
+    </script>
+</body>
+</html>
